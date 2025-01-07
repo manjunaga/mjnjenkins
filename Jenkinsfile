@@ -5,6 +5,7 @@ pipeline {
     environment {
         ENV = "${env.BRANCH_NAME == 'master' ? 'PROD' : 'DEV'}"
     }
+    
     stages {
         stage('Build') {
             steps {
