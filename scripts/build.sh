@@ -13,7 +13,6 @@ fi
 export GOTMPDIR="$JENKINS_HOME/$ENV"
 mkdir -p $GOTMPDIR
 echo "*** Building the app ..."
-chmod -R 777 /tmp/cgo-gcc-input-*
-chmod -R 777 /tmp/*
+chmod -R 777 /tmp/cgo*
 
 go build -o $GOTMPDIR/$ENV main.go
